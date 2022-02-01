@@ -1,0 +1,33 @@
+@import 'base/color.scss';
+@import 'base/font.scss';
+@import 'base/mixin.scss';
+@import 'base/variable.scss';
+@import 'base/keyframes.scss';
+.footer {
+	margin-top: 16rem;
+	text-align: center;
+	color: $black;
+	font-family: 'GmarketSansLight';
+	.footer-line {
+		width: 100%;
+		height: 1px;
+		background-color: $black;
+		margin-bottom: 4rem;
+	}
+	.footer-email {
+		font-size: 1.5rem;
+		margin-bottom: 3rem;
+	}
+	.footer-copyrights {
+		font-size: 1rem;
+		margin-bottom: 4rem;
+	}
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+	html {
+		font-size: $mobile;
+	}
+	.footer {
+		margin-top: 7.5rem;
+	}
+}

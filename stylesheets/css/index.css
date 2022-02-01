@@ -1,0 +1,33 @@
+@font-face { font-family: 'GmarketSansLight'; src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff") format("woff"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'GmarketSansMedium'; src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'GmarketSansBold'; src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff"); font-weight: normal; font-style: normal; }
+html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; background-color: #ffffff; width: 100vw; overflow-x: hidden; }
+
+.container { position: relative; width: 100%; max-width: 1420px; margin: 0 auto; font-family: 'GmarketSansLight'; }
+.container .intro { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: flex-end; -ms-flex-pack: flex-end; justify-content: flex-end; }
+.container .intro .intro-wrapper { display: inline-block; width: 100%; max-width: 883px; text-align: left; margin-top: 20rem; }
+.container .intro .intro-wrapper .intro-img { width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; }
+.container .intro .intro-wrapper .intro-img .intro-img__minmax { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: end; -ms-flex-align: end; align-items: end; }
+.container .intro .intro-wrapper .intro-img .intro-img__minmax .minmax-text { width: 100%; max-width: 500px; }
+.container .intro .intro-wrapper .intro-img .intro-img__minmax .minmax-text img { display: block; width: 100%; }
+.container .intro .intro-wrapper .intro-img .intro-img__minmax .minmax-tri { width: 100%; max-width: 30px; margin: 0 1rem; }
+.container .intro .intro-wrapper .intro-img .intro-img__minmax .minmax-tri img { display: block; width: 100%; }
+.container .intro .intro-wrapper .intro-title { clear: both; font-size: 2.5rem; color: #2f2f2f; margin-top: 3rem; }
+.container .intro .intro-wrapper .intro-text { font-size: 1.25rem; line-height: 1.5; color: #2f2f2f; margin-top: 6rem; word-break: keep-all; word-wrap: break-word; }
+.container .contents .content { margin-top: 8.5rem; }
+.container .contents .content .content-img { display: block; width: 100%; height: 27rem; background-color: #a8a8a8; }
+.container .contents .content .content-def { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: flex-start; -ms-flex-align: flex-start; align-items: flex-start; color: #2f2f2f; margin-top: 3rem; }
+.container .contents .content .content-def .def-title { display: inline-block; width: 50%; font-size: 2.25rem; font-family: 'GmarketSansBold'; }
+.container .contents .content .content-def .def-text { display: inline-block; width: 50%; font-size: 1.25rem; line-height: 1.5; word-break: keep-all; word-wrap: break-word; }
+
+@media screen and (min-width: 320px) and (max-width: 768px) { html { font-size: 14px; }
+  .container { margin: 0; padding: 0 20px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+  .container .intro .intro-wrapper .intro-img .intro-img__minmax .minmax-tri { max-width: 16px; }
+  .container .intro .intro-wrapper .intro-title { margin-top: 2rem; font-size: 2rem; }
+  .container .intro .intro-wrapper .intro-text { margin-top: 5rem; }
+  .container .contents .content .content-img { height: 27rem; }
+  .container .contents .content .content-def { display: block; -webkit-box-align: unset; -ms-flex-align: unset; align-items: unset; margin-top: 3rem; }
+  .container .contents .content .content-def .def-title { display: block; width: 100%; }
+  .container .contents .content .content-def .def-text { display: block; width: 100%; margin-top: 1rem; font-size: 1rem; } }
+
+/*# sourceMappingURL=index.css.map */
