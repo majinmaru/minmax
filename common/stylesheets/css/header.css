@@ -17,7 +17,7 @@
 .mobile-dropdown { display: none; }
 
 @media screen and (min-width: 320px) and (max-width: 768px) { html { font-size: 14px; }
-  #header .header-wrapper { width: unset; max-width: none; margin: 0; padding: 0 20px; }
+  #header .header-wrapper { max-width: unset; margin: 0; padding: 0 20px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
   #header .header-wrapper .menu-pc { display: none; }
   #header .header-wrapper .menu-pc-contact { display: none; }
   #header .header-wrapper .dropdown { display: inline-block; }

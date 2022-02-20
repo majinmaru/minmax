@@ -3,7 +3,15 @@ $(document).ready(function(){
 		infinite: true,
 	    slidesToShow: 4,
 	    prevArrow: $('.button.back'),
-	    nextArrow: $('.button.next')
+	    nextArrow: $('.button.next'),
+	    responsive: [
+    		{
+      			breakpoint: 768,
+      			settings: {
+        		slidesToShow: 1
+        		}
+        	}
+    	]
 	});
 
 	$('.button.back').hover(function(){

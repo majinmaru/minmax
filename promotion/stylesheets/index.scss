@@ -39,6 +39,9 @@ html {
 			padding: 0 2rem;
 			@include box-sizing(border-box);
 			margin-top: 1rem;
+			line-height: 1.5;
+			word-break: keep-all;
+			word-wrap: break-word;
 		}
 	}
 	.cards-wrapper {
@@ -47,7 +50,7 @@ html {
 		.cards {
 			.card {
 				display: inline-block;
-				margin-right: 12px;
+				margin-right: 1rem;
 				margin-top: 1.5rem;
 				width: 346px;
 				text-decoration: none;
@@ -130,5 +133,12 @@ html {
 		margin:0;
 		padding: 0 20px;
 		@include box-sizing(border-box);
+		.cards-wrapper {
+			.cards {
+				.card {
+					width: 300px;
+				}
+			}
+		}
 	}
 }
