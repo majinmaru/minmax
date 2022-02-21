@@ -18,6 +18,115 @@ html {
 	max-width: 1420px;
 	margin: 0 auto;
 	font-family: 'GmarketSansLight';
+	color: $black;
+	.summary {
+		margin-top: 7.5rem;
+		text-align: center;
+		padding-top: 2rem;
+		@include box-sizing(border-box);
+		.summary-icon {
+			display: inline-block;
+			width: 30px;
+			margin: 0 auto;
+			img {
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+		}
+		.summary-text {
+			text-align: center;
+			padding: 0 2rem;
+			@include box-sizing(border-box);
+			margin-top: 1rem;
+			line-height: 1.5;
+			word-break: keep-all;
+			word-wrap: break-word;
+		}
+	}
+	.cards-wrapper {
+		@include box-sizing(border-box);
+		overflow-x: hidden;
+		.cards {
+			.card {
+				display: inline-block;
+				margin-right: 1rem;
+				margin-top: 3rem;
+				width: 346px;
+				text-decoration: none;
+				color: $black;
+				&:hover {
+					.card-title {
+						color: $point;
+					}
+					.card-image {
+						&:after {
+							background-color: $point;
+						}
+					}
+				}
+				.card-title {
+					margin-top: 1.5rem;
+					font-family: 'GmarketSansMedium';
+					font-size: 2rem;
+					line-height: 1.2;
+					width: 100%;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					@include box-sizing(border-box);
+					padding-right: 10px;
+				}
+				.card-image {
+					margin-top: 1.25rem;
+					width: 100%;
+					position: relative;
+					@include box-sizing(border-box);
+					@include transition(all 0.3s ease);
+					&:after {
+						content: '';
+						position: absolute;
+						display: block;
+						width: 100%;
+						height: 2px;
+						bottom: 0;
+						left: 0;
+						background-color: none;
+					}
+					img {
+						display: block;
+						width: 100%;
+					}
+				}
+				.card-channel {
+					margin-top: 1.25rem;
+					font-size: 1.25rem;
+				}
+				.card-year {
+					margin-top: 0.75rem;
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+	.cards-buttons {
+		margin-top: 3.5rem;
+		text-align: center;
+		.button {
+			display: inline-block;
+			width: 5rem;
+			height: 5rem;
+			margin-left: 1rem;
+			cursor: pointer;
+			&:nth-of-type(1) {
+				margin-left: 0;
+			}
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
 }
 @media screen and (min-width: 320px) and (max-width: 768px) {
 	html {
@@ -27,5 +136,12 @@ html {
 		margin:0;
 		padding: 0 20px;
 		@include box-sizing(border-box);
+		.cards-wrapper {
+			.cards {
+				.card {
+					width: 300px;
+				}
+			}
+		}
 	}
 }

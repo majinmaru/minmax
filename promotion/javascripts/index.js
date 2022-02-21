@@ -1,4 +1,23 @@
 $(document).ready(function(){
+	
+	$('.menu-pc li:nth-child(2)').css({
+		'font-family': 'GmarketSansMedium'
+	});
+	$('.menu-mo li:nth-child(2)').css({
+		'font-family': 'GmarketSansMedium'
+	});
+	
+	var topbtnAppear = function() {
+		var windowHeight = $(window).height();
+		var scrollTop = $(window).scrollTop();
+
+		if(scrollTop > windowHeight){
+			$(".topbtn").addClass("appear");
+		} else {
+			$(".topbtn").removeClass("appear");
+		}
+	}
+
 	$('.cards').slick({
 		infinite: true,
 	    slidesToShow: 4,

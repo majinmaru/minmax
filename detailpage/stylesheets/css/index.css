@@ -3,9 +3,28 @@
 @font-face { font-family: 'GmarketSansBold'; src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff"); font-weight: normal; font-style: normal; }
 html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; background-color: #ffffff; width: 100vw; overflow-x: hidden; }
 
-.container { position: relative; width: 100%; max-width: 1420px; margin: 0 auto; font-family: 'GmarketSansLight'; }
+.container { position: relative; width: 100%; max-width: 1420px; margin: 0 auto; font-family: 'GmarketSansLight'; color: #2f2f2f; }
+.container .summary { margin-top: 7.5rem; text-align: center; padding-top: 2rem; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.container .summary .summary-icon { display: inline-block; width: 30px; margin: 0 auto; }
+.container .summary .summary-icon img { display: block; width: 100%; height: auto; }
+.container .summary .summary-text { text-align: center; padding: 0 2rem; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin-top: 1rem; line-height: 1.5; word-break: keep-all; word-wrap: break-word; }
+.container .cards-wrapper { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; overflow-x: hidden; }
+.container .cards-wrapper .cards .card { display: inline-block; margin-right: 1rem; margin-top: 3rem; width: 346px; text-decoration: none; color: #2f2f2f; }
+.container .cards-wrapper .cards .card:hover .card-title { color: #3CEE29; }
+.container .cards-wrapper .cards .card:hover .card-image:after { background-color: #3CEE29; }
+.container .cards-wrapper .cards .card .card-title { margin-top: 1.5rem; font-family: 'GmarketSansMedium'; font-size: 2rem; line-height: 1.2; width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding-right: 10px; }
+.container .cards-wrapper .cards .card .card-image { margin-top: 1.25rem; width: 100%; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; }
+.container .cards-wrapper .cards .card .card-image:after { content: ''; position: absolute; display: block; width: 100%; height: 2px; bottom: 0; left: 0; background-color: none; }
+.container .cards-wrapper .cards .card .card-image img { display: block; width: 100%; }
+.container .cards-wrapper .cards .card .card-channel { margin-top: 1.25rem; font-size: 1.25rem; }
+.container .cards-wrapper .cards .card .card-year { margin-top: 0.75rem; font-size: 1rem; }
+.container .cards-buttons { margin-top: 3.5rem; text-align: center; }
+.container .cards-buttons .button { display: inline-block; width: 5rem; height: 5rem; margin-left: 1rem; cursor: pointer; }
+.container .cards-buttons .button:nth-of-type(1) { margin-left: 0; }
+.container .cards-buttons .button img { display: block; width: 100%; }
 
 @media screen and (min-width: 320px) and (max-width: 768px) { html { font-size: 14px; }
-  .container { margin: 0; padding: 0 20px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; } }
+  .container { margin: 0; padding: 0 20px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+  .container .cards-wrapper .cards .card { width: 300px; } }
 
 /*# sourceMappingURL=index.css.map */
