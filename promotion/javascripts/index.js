@@ -23,6 +23,7 @@ $(document).ready(function(){
 	    slidesToShow: 4,
 	    prevArrow: $('.button.back'),
 	    nextArrow: $('.button.next'),
+	    variableWidth: true,
 	    responsive: [
     		{
       			breakpoint: 768,

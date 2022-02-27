@@ -8,9 +8,9 @@
 #header .header-wrapper .menu-pc { display: inline-block; }
 #header .header-wrapper .menu-pc li { display: inline-block; margin-right: 5.375rem; }
 #header .header-wrapper .menu-pc li:nth-of-type(3) { margin-right: 0; }
-#header .header-wrapper .menu-pc li a { display: span; color: #2f2f2f; text-decoration: none; text-align: center; }
+#header .header-wrapper .menu-pc li a { display: span; color: #2f2f2f; text-decoration: none; text-align: center; line-height: 1; }
 #header .header-wrapper .menu-pc li a:hover { color: #3CEE29; }
-#header .header-wrapper .menu-pc-contact a { display: inline; color: #2f2f2f; text-decoration: none; }
+#header .header-wrapper .menu-pc-contact a { display: inline; color: #2f2f2f; text-decoration: none; line-height: 1; }
 #header .header-wrapper .menu-pc-contact a:hover { color: #3CEE29; }
 #header .header-wrapper .dropdown { display: none; }
 
@@ -28,8 +28,8 @@
   .mobile-dropdown { display: none; position: fixed; z-index: 999; top: 7.5rem; background: #ffffff; width: 100%; height: 0; font-family: 'GmarketSansLight'; padding-right: 20px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-transition: height 0.5s linear; -o-transition: height 0.5s linear; transition: height 0.5s linear; }
   .mobile-dropdown.active { display: block; height: calc(100vh - 7.5rem); }
   .mobile-dropdown .menu-mo { position: relative; width: 100%; height: auto; margin-top: 10rem; text-align: right; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-direction: column; -ms-flex-direction: column; flex-direction: column; }
-  .mobile-dropdown .menu-mo li { display: block; margin-bottom: 2rem; }
-  .mobile-dropdown .menu-mo li a { color: #2f2f2f; text-decoration: none; text-align: right; font-size: 2rem; }
+  .mobile-dropdown .menu-mo li { display: block; margin-bottom: 3rem; }
+  .mobile-dropdown .menu-mo li a { color: #2f2f2f; text-decoration: none; text-align: right; font-size: 2rem; line-height: 1; }
   .mobile-dropdown .menu-mo li a:hover { color: #3CEE29; } }
 
 /*# sourceMappingURL=header.css.map */
