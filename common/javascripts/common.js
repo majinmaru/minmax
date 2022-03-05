@@ -11,7 +11,7 @@ $(document).ready(function(){
 		var dropdown = $(".dropdown");
 		if(dropdown.hasClass('active')){
 			dropdown.removeClass('active')
-			$(".tri img").attr("src", "../common/images/dropdown-normal.png");
+			$(".tri img").attr("src", "https://majinmaru.github.io/minmax/common/images/dropdown-normal.png");
 			$(".mobile-dropdown").removeClass('active')
 			//$(".mobile-dropdown").animate({ 
 			//	height: "0" 
@@ -21,7 +21,7 @@ $(document).ready(function(){
 			//});
 		} else {
 			dropdown.addClass('active')
-			$(".tri img").attr("src", "../common/images/dropdown-active.png");
+			$(".tri img").attr("src", "https://majinmaru.github.io/minmax/common/images/dropdown-active.png");
 			$(".mobile-dropdown").addClass('active');
 			//$(".mobile-dropdown").animate({
 			//	display: 'block',
