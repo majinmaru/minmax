@@ -9,9 +9,61 @@ $(document).ready(function(){
 		$('.img-promo').eq(currentIndex).siblings().removeClass('on');
 	});
 	*/
+	/* 이전 팝업 열기
+	var openPopup = function() {
+		$(".content-detailpage").show();
+		$(".container").on('scroll touchmove mousewheel', function(event) {
+			event.preventDefault();
+			event.stopPropagation();
+			return false;
+		});
+	}
+	*/
+
+	/* 이전 팝업 닫기
+	var closePopup = function() {
+		$(".content-detailpage").hide();
+		$(".container").off('scroll touchmove mousewheel');
+	}
+	*/
+	var posY;
+
+	var openPopup = function() {
+		posY = $(window).scrollTop();
+		$(".content-detailpage").show();
+		$("html, body").addClass("not-scroll");
+		$(".container").css("top", -posY);
+	}
+
 	
+	var closePopup = function() {
+		$(".content-detailpage").hide();
+		$("html, body").removeClass("not-scroll");
+		$(".container").css("top", "0");
+		posY = $(window).scrollTop(posY);
+	}
+	
+
+
+
+	$(".thumbnail").click(function(e){
+		e.preventDefault();
+		var getIndex = $(this).index();
+		var imageIndex = getIndex + 1;
+		$(".show-img").append('<img src="./images/detail-0' + imageIndex + '.jpg" />')
+		openPopup();
+	});
+
+
+	$(".detailpage-exit").click(function(e){
+		e.preventDefault();
+		$(".show-img *").remove();
+		closePopup();
+	});
+
+
 	var floatingBtn = function() {
-		var contentsTop = $(".warpper-content").offset().top;
+		var contentsTop = $("#plan").offset().top;
 		var scrollTop = $(window).scrollTop();
 		if(scrollTop > contentsTop){
 			$(".floating").addClass("on");

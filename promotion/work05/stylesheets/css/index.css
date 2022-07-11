@@ -45,7 +45,7 @@ html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoot
   .container .wrapper-desc .desc-info { width: 100%; margin-top: 2rem; padding-left: 0; padding-bottom: 4rem; border-bottom: 1px solid #2f2f2f; }
   .container .wrapper-desc .desc-info .info-subtitle { line-height: 1; }
   .container .wrapper-desc .desc-info .info-title { line-height: 1.2; margin-top: 1rem; }
-  .container .wrapper-desc .desc-info .info-summary { margin-top: 0; font-size: 1rem; }
+  .container .wrapper-desc .desc-info .info-summary { margin-top: 0; font-size: 1.2rem; }
   .container .wrapper-desc .desc-info .info-summary tr { margin-top: 1.5rem; }
   .container .wrapper-desc .desc-info .info-summary tr td:nth-of-type(1) { width: 7rem; }
   .container .warpper-content .wrapper-content-btn .content-btn { font-size: 1rem; margin-left: 0.5rem; }
