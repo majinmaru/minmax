@@ -1,0 +1,425 @@
+@import '../../../common/stylesheets/base/color.scss';
+@import '../../../common/stylesheets/base/font.scss';
+@import '../../../common/stylesheets/base/mixin.scss';
+@import '../../../common/stylesheets/base/variable.scss';
+@import '../../../common/stylesheets/base/keyframes.scss';
+html {
+	font-size: $desktop;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	background-color: $bg;
+	width: 100vw;
+	overflow-x: hidden;
+}
+.not-scroll {
+	position: fixed;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+.container {
+	position: relative;
+	width: 100%;
+	max-width: 1420px;
+	margin: 0 auto;
+	font-family: 'GmarketSansLight';
+	color: $black;
+	margin-top: 12rem;
+	.wrapper-desc {
+		width: 100%;
+		@include flexbox();
+		.desc-img {
+			display: inline-block;
+			width: 50%;
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+		.desc-info {
+			display: inline-block;
+			width: 50%;
+			@include box-sizing(border-box);
+			padding-left: 3rem;
+			.info-subtitle {
+				font-size: 1rem;
+				line-height: 1.4;
+			}
+			.info-title {
+				font-family: 'GmarketSansBold';
+				font-size: 2.25rem;
+				line-height: 1;
+				margin-top: 1.5rem;
+				word-wrap: break-word;
+				word-break: keep-all;
+			}
+			.info-summary {
+				width: 100%;
+				margin-top: 4rem;
+				word-wrap: break-word;
+				word-break: keep-all;
+				font-size: 1.25rem;
+				tr {
+					display: block;
+					margin-top: 2.5rem;
+					td {
+						line-height: 1.4;
+						&:nth-of-type(1) {
+							font-family: 'GmarketSansMedium';
+							width: 8.25rem;
+						}
+					}
+				}
+			}
+		}
+	}
+	.warpper-content {
+		width: 100%;
+		margin-top: 12.5rem;
+		position: relative;
+		.content-title {
+			text-align: center;
+			font-size: 3.5rem;
+			font-family: 'GmarketSansBold';
+			line-height: 1.2;
+			margin-top: 9rem;
+		}
+		.content-list {
+			margin-top: 5rem;
+			@include flexbox();
+			@include flex-wrap(wrap);
+			.thumbnail {
+				max-width: 450px;
+				overflow: hidden;
+				position: relative;
+				margin-right: 1rem;
+				margin-top: 4.5rem;
+				cursor: pointer;
+				&:nth-of-type(3n) {
+					margin-right: 0;
+				}
+				&:after {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					width: 100%;
+					height: 4px;
+					background-color: $point;
+					display: none;
+				}
+				&:hover {
+					&:after {
+						display: block;
+					}
+				}
+				img {
+					width: 100%;
+					display: block;
+				}
+			}
+		}
+		.content-detailpage {
+			display: none;
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100vh;
+			background: rgba(0, 0, 0, 0.52);
+			z-index: 9999;
+			.detailpage-exit {
+				position: absolute;
+				display: inline;
+				width: 4rem;
+				height: 4rem;
+				border-radius: 50%;
+				top: 6rem;
+				left: 50%;
+				@include transform(translateX(-50%));
+				background-color: $point;
+				text-align: center;
+				cursor: pointer;
+				span {
+					color: white;
+					font-size: 1.5rem;
+					line-height: 4.5rem;
+					vertical-align: middle;
+					font-family: 'GmarketSansBold';
+				}
+			}
+			.detailpage-show {
+				position: absolute;
+				top: 12rem;
+				width: 100%;
+				max-width: 1320px;
+				left: 50%;
+				@include transform(translateX(-50%));
+				height: calc(100vh - 15rem);
+				background-color: white;
+				border-radius: 1.25rem;
+				overflow-y: auto;
+				.show-exp {
+					font-size: 1rem;
+					text-align: center;
+					margin-top: 2rem;
+					margin-bottom: 2rem; 
+				}
+				.show-img {
+					width: 80%;
+					margin: 0 auto;
+					img {
+						display: block;
+						width: 100%;
+					}
+				}
+			}
+		}
+		.content-plan {
+			position: relative;
+			.plan-image {
+				margin-top: 7.5rem;
+				z-index: 1;
+				img {
+					display: block;
+					width: 100%;
+				}
+			}
+			.plan-text {
+				display: inline-block;
+				width: calc(50% - 3rem);
+				max-width: 655px;
+				background-color: white;
+				padding: 6rem 5rem 2rem 5rem;
+				@include box-sizing(border-box);
+				margin-top: -4rem;
+				z-index: 2;
+				&.right {
+					margin-left: 50%;
+				}
+				&.left {
+					margin-left: 3rem;
+				}
+				.plan-text_title {
+					font-size: 2.5rem;
+				}
+				.plan-text_exp {
+					font-size: 1.5rem;
+					line-height: 1.8;
+					margin-top: 4rem;
+					word-wrap: break-word;
+					word-break: keep-all;
+				}
+			}
+		}
+	}
+	.floating {
+		display: none;
+		z-index: 9999;
+		position: fixed;
+		bottom: 4rem;
+		right: 2rem;
+		width: 16rem;
+		border-radius: 2rem;
+		background-color: #fff;
+		@include box-shadow(0px 0px 10px rgba(0, 0, 0, 0.3));
+		padding: 2rem 2rem;
+		@include transition(all ease 0.4s);
+		&.on {
+			display: inline-block;
+		}
+		&.min {
+			width: 4rem;
+			padding: 0.5rem;
+			.floating-text {
+				display: none;
+			}
+		}
+		.floating-text {
+			font-size: 1rem;
+			line-height: 1.4;
+			word-wrap: break-word;
+			word-break: keep-all;
+			text-align: center;
+		}
+		.floating-btn {
+			width: 100%;
+			font-size: 1.4rem;
+			line-height: 1;
+			color: #fff;
+			background-color: $point;
+			display: block;
+			text-align: center;
+			cursor: pointer;
+			border-radius: 1rem;
+			margin-top: 1rem;
+			font-family: 'GmarketSansMedium';
+			padding: 1rem 1rem 0.8rem 1rem;
+			@include box-sizing(border-box);
+			&.min {
+				height: 3rem;
+				line-height: 3.3rem;
+				vertical-align: middle;
+				border-radius: 3rem;
+				padding: 0;
+				margin-top: 2rem;
+				span {
+					&:nth-of-type(2) {
+						display: none;
+					}
+				}
+			}
+		}
+		.floating-close {
+			display: inline-block;
+			font-family: 'GmarketSansMedium';
+			position: absolute;
+			top: -1.5rem;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			width: 3rem;
+			height: 3rem;
+			font-size: 1.5rem;
+			line-height: 3.3rem;
+			vertical-align: middle;
+			text-align: center;
+			border-radius: 1.5rem;
+			background-color: #BDBDBD;
+			color: white;
+			cursor: pointer;
+			span {
+				&:nth-of-type(2) {
+					display: none;
+				}
+			}
+			&.min {
+				span {
+					&:nth-of-type(1) {
+						display: none;
+					}
+					&:nth-of-type(2) {
+						display: inline;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+	html {
+		font-size: $mobile;
+	}
+	.container {
+		margin: 0;
+		padding: 0 20px;
+		@include box-sizing(border-box);
+		.wrapper-desc {
+			margin-top: 9rem;
+			@include flex-direction(column);
+			.desc-img {
+				width: 100%;
+			}
+			.desc-info {
+				width: 100%;
+				margin-top: 2rem;
+				padding-left: 0;
+				padding-bottom: 4rem;
+				border-bottom: 1px solid $black;
+				.info-subtitle {
+					line-height: 1;
+				}
+				.info-title {
+					line-height: 1.2;
+					margin-top: 1rem;
+				}
+				.info-summary {
+					margin-top: 0;
+					font-size: 1.2rem;
+					tr {
+						margin-top: 1.5rem;
+						td {
+							&:nth-of-type(1) {
+								width: 7rem;
+							}
+						}
+					}
+				}
+			}
+		}
+		.warpper-content {
+			.content-title {
+				font-size: 2.5rem;
+			}
+			.content-list {
+				margin-top: 3rem;
+				.thumbnail {
+					width: calc(50% - 0.5rem);
+					margin-top: 2rem;
+					&:nth-of-type(3n) {
+						margin-right: 1rem;
+					}
+					&:nth-of-type(2n) {
+						margin-right: 0;
+					}
+				}
+			}
+			.content-detailpage {
+				.detailpage-exit {
+					top: 4rem;
+				}
+				.detailpage-show {
+					top: 10rem;
+					width: 90%;
+					height: calc(100vh - 14rem);
+					.show-exp {
+						font-size: 1.2rem;
+						margin-top: 3rem;
+						margin-bottom: 2rem; 
+					}
+					.show-img {
+						width: 90%;
+						margin: 0 auto;
+					}
+				}
+			}
+			.content-plan {
+				.plan-image {
+					margin-top: 5rem;
+				}
+				.plan-text {
+					width: calc(100% - 2rem);
+					padding: 3rem 0 0 0;
+					margin-top: 0;
+					&.right {
+						margin-left: 1rem;
+					}
+					&.left {
+						margin-left: 1rem;
+					}
+					.plan-text_title {
+						font-size: 2rem;
+					}
+					.plan-text_exp {
+						margin-top: 2rem;
+						font-size: 1.2rem;
+					}
+				}
+			}	
+		}	
+		.floating {
+			width: 14rem;
+			right: 0;
+			left: 0;
+			margin: 0 auto;
+			&.min {
+				right: 1rem;
+				left: unset;
+				margin: unset;
+			}
+			.floating-btn {
+				font-size: 1rem;
+			}
+		}
+	}
+}

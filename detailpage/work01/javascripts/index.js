@@ -26,6 +26,11 @@ $(document).ready(function(){
 		$(".container").off('scroll touchmove mousewheel');
 	}
 	*/
+	$(".detailpage-show").mCustomScrollbar({
+    	theme:"dark"
+	});
+
+	
 	var posY;
 
 	var openPopup = function() {
@@ -63,7 +68,7 @@ $(document).ready(function(){
 
 
 	var floatingBtn = function() {
-		var contentsTop = $("#plan").offset().top;
+		var contentsTop = $(".warpper-content").offset().top;
 		var scrollTop = $(window).scrollTop();
 		if(scrollTop > contentsTop){
 			$(".floating").addClass("on");
