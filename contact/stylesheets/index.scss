@@ -18,6 +18,95 @@ html {
 	max-width: 1420px;
 	margin: 0 auto;
 	font-family: 'GmarketSansLight';
+	.introduce {
+		text-align: center;
+		.introduce-poster {
+			display: inline-block;
+			width: 100%;
+			max-width: 800px;
+			img {
+				display: block;
+				position: relative;
+			}
+		}
+		.introduce-def {
+			margin-top: 6.25rem;
+			text-align: center;
+			font-size: 1.75rem;
+			line-height: 1.7;
+		}
+		.introduce-txt {
+			margin-top: 6.25rem;
+			text-align: center;
+			font-size: 1.25rem;
+			line-height: 1.7;
+			word-wrap: break-word;
+			word-break: keep-all;
+			.strong {
+				color: $point;
+				font-family: 'GmarketSansBold';
+			}
+		}
+		.introduce-3rule {
+			margin-top: 6.25rem;
+			@include flexbox();
+			@include justify-content(center);
+			img {
+				margin-left: 1.2rem;
+				&:nth-of-type(1) {
+					margin-left: 0;
+				}
+			}
+		}
+		.introduce-call {
+			margin-top: 6.25rem;
+			display: inline-block;
+			width: 100%;
+			max-width: 960px;
+			img {
+				display: block;
+			}
+		}
+		.introduce-email {
+			margin-top: 8.25rem;
+			font-size: 6.25rem;
+			text-align: center;
+			color: $point;
+			display: inline-block;
+			position: relative;
+			font-family: 'GmarketSansBold';
+			line-height: 1.5;
+			&:after {
+				content:'';
+				display: inline-block;
+				width: 100%;
+				height: 4px;
+				background-color: $point;
+				position: absolute;
+				left: 0;
+				bottom: -4px;
+			}
+		}
+		.introduce-emailtxt {
+			width: 1px;
+			height: 1px;
+			padding: 2px;
+			overflow: hidden;
+			opacity: 0;
+		}
+		.introduce-work {
+			display: inline-block;
+			width: 100%;
+			max-width: 720px;
+			&:nth-of-type(1){
+				margin-top: 6.25rem;
+			}
+			img{
+				display: block;
+				margin-bottom: 1rem;
+			}
+		}
+	}
 }
 @media screen and (min-width: 320px) and (max-width: 768px) {
 	html {
@@ -27,5 +116,41 @@ html {
 		margin:0;
 		padding: 0 20px;
 		@include box-sizing(border-box);
+		.introduce {
+			margin-top: 9rem;
+			.introduce-poster {
+				max-width: unset;
+				img {
+					width: 100%;
+				}
+			}
+			.introduce-txt {
+				padding: 0 1rem;
+				@include box-sizing(border-box);
+			}
+			.introduce-3rule {
+				@include flex-wrap(wrap);
+				img {
+					margin-top: 1rem;
+					margin-left: unset;
+				}
+			}
+			.introduce-call {
+				max-width: unset;
+				img {
+					width: 100%;
+				}
+			}
+			.introduce-email {
+				font-size: 2rem;
+				margin-bottom: 3rem;
+			}
+			.introduce-work {
+				max-width: unset;
+				img {
+					width: 100%;
+				}
+			}	
+		}	
 	}
 }

@@ -4,8 +4,36 @@
 html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; background-color: #ffffff; width: 100vw; overflow-x: hidden; }
 
 .container { position: relative; width: 100%; max-width: 1420px; margin: 0 auto; font-family: 'GmarketSansLight'; }
+.container .introduce { text-align: center; }
+.container .introduce .introduce-poster { display: inline-block; width: 100%; max-width: 800px; }
+.container .introduce .introduce-poster img { display: block; position: relative; }
+.container .introduce .introduce-def { margin-top: 6.25rem; text-align: center; font-size: 1.75rem; line-height: 1.7; }
+.container .introduce .introduce-txt { margin-top: 6.25rem; text-align: center; font-size: 1.25rem; line-height: 1.7; word-wrap: break-word; word-break: keep-all; }
+.container .introduce .introduce-txt .strong { color: #3CEE29; font-family: 'GmarketSansBold'; }
+.container .introduce .introduce-3rule { margin-top: 6.25rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+.container .introduce .introduce-3rule img { margin-left: 1.2rem; }
+.container .introduce .introduce-3rule img:nth-of-type(1) { margin-left: 0; }
+.container .introduce .introduce-call { margin-top: 6.25rem; display: inline-block; width: 100%; max-width: 960px; }
+.container .introduce .introduce-call img { display: block; }
+.container .introduce .introduce-email { margin-top: 8.25rem; font-size: 6.25rem; text-align: center; color: #3CEE29; display: inline-block; position: relative; font-family: 'GmarketSansBold'; line-height: 1.5; }
+.container .introduce .introduce-email:after { content: ''; display: inline-block; width: 100%; height: 4px; background-color: #3CEE29; position: absolute; left: 0; bottom: -4px; }
+.container .introduce .introduce-emailtxt { width: 1px; height: 1px; padding: 2px; overflow: hidden; opacity: 0; }
+.container .introduce .introduce-work { display: inline-block; width: 100%; max-width: 720px; }
+.container .introduce .introduce-work:nth-of-type(1) { margin-top: 6.25rem; }
+.container .introduce .introduce-work img { display: block; margin-bottom: 1rem; }
 
 @media screen and (min-width: 320px) and (max-width: 768px) { html { font-size: 14px; }
-  .container { margin: 0; padding: 0 20px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; } }
+  .container { margin: 0; padding: 0 20px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+  .container .introduce { margin-top: 9rem; }
+  .container .introduce .introduce-poster { max-width: unset; }
+  .container .introduce .introduce-poster img { width: 100%; }
+  .container .introduce .introduce-txt { padding: 0 1rem; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+  .container .introduce .introduce-3rule { -ms-flex-wrap: wrap; flex-wrap: wrap; }
+  .container .introduce .introduce-3rule img { margin-top: 1rem; margin-left: unset; }
+  .container .introduce .introduce-call { max-width: unset; }
+  .container .introduce .introduce-call img { width: 100%; }
+  .container .introduce .introduce-email { font-size: 2rem; margin-bottom: 3rem; }
+  .container .introduce .introduce-work { max-width: unset; }
+  .container .introduce .introduce-work img { width: 100%; } }
 
 /*# sourceMappingURL=index.css.map */
