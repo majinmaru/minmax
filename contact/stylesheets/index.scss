@@ -18,6 +18,7 @@ html {
 	max-width: 1420px;
 	margin: 0 auto;
 	font-family: 'GmarketSansLight';
+	margin-top: 9rem;
 	.introduce {
 		text-align: center;
 		.introduce-poster {
@@ -117,7 +118,6 @@ html {
 		padding: 0 20px;
 		@include box-sizing(border-box);
 		.introduce {
-			margin-top: 9rem;
 			.introduce-poster {
 				max-width: unset;
 				img {
@@ -133,6 +133,8 @@ html {
 				img {
 					margin-top: 1rem;
 					margin-left: unset;
+					width: 100%;
+					max-width: 422px;
 				}
 			}
 			.introduce-call {

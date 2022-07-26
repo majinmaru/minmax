@@ -3,7 +3,7 @@
 @font-face { font-family: 'GmarketSansBold'; src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff"); font-weight: normal; font-style: normal; }
 html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; background-color: #ffffff; width: 100vw; overflow-x: hidden; }
 
-.container { position: relative; width: 100%; max-width: 1420px; margin: 0 auto; font-family: 'GmarketSansLight'; }
+.container { position: relative; width: 100%; max-width: 1420px; margin: 0 auto; font-family: 'GmarketSansLight'; margin-top: 9rem; }
 .container .introduce { text-align: center; }
 .container .introduce .introduce-poster { display: inline-block; width: 100%; max-width: 800px; }
 .container .introduce .introduce-poster img { display: block; position: relative; }
@@ -24,12 +24,11 @@ html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoot
 
 @media screen and (min-width: 320px) and (max-width: 768px) { html { font-size: 14px; }
   .container { margin: 0; padding: 0 20px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-  .container .introduce { margin-top: 9rem; }
   .container .introduce .introduce-poster { max-width: unset; }
   .container .introduce .introduce-poster img { width: 100%; }
   .container .introduce .introduce-txt { padding: 0 1rem; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
   .container .introduce .introduce-3rule { -ms-flex-wrap: wrap; flex-wrap: wrap; }
-  .container .introduce .introduce-3rule img { margin-top: 1rem; margin-left: unset; }
+  .container .introduce .introduce-3rule img { margin-top: 1rem; margin-left: unset; width: 100%; max-width: 422px; }
   .container .introduce .introduce-call { max-width: unset; }
   .container .introduce .introduce-call img { width: 100%; }
   .container .introduce .introduce-email { font-size: 2rem; margin-bottom: 3rem; }
