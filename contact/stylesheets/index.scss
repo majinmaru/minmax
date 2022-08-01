@@ -114,8 +114,8 @@ html {
 		font-size: $mobile;
 	}
 	.container {
-		margin:0;
 		padding: 0 20px;
+		margin-top: 9rem;
 		@include box-sizing(border-box);
 		.introduce {
 			.introduce-poster {
