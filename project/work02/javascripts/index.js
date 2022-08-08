@@ -63,6 +63,19 @@ $(document).ready(function(){
 	});
 
 
+	$('.ds-btn').click(function(e){
+		e.preventDefault();
+		var index = $(this).index();
+		var getId = index + 1;
+		$("#tab0" + getId).show();
+		$("#tab0" + getId).siblings().hide();
+		var contentTop = $(".warpper-content").offset().top;
+		var headerHeight = $("#header").height();
+		$("html, body").animate({
+			scrollTop: contentTop - headerHeight
+		}, 400)
+	});
+
 
 
 
