@@ -48,20 +48,19 @@ $(document).ready(function(){
 	});
 
 
-
-	$('.ds-btn').click(function(e){
+	$('.bx-btn').click(function(e){
 		e.preventDefault();
 		var index = $(this).index();
-		var getId = index + 1;
-		$("#tab0" + getId).show();
-		$("#tab0" + getId).siblings().hide();
-		var contentTop = $(".warpper-content").offset().top;
+		$('.bx-content').eq(index).show();
+		$('.bx-content').eq(index).siblings().hide();
+		$(this).addClass('active');
+		$(this).siblings().removeClass('active');
+		var contentTop = $(".bx-wrapper").offset().top;
 		var headerHeight = $("#header").height();
 		$("html, body").animate({
 			scrollTop: contentTop - headerHeight
 		}, 400)
 	});
-
 
 
 
