@@ -49,6 +49,9 @@ html {
 							display: block;
 							width: 100%;
 						}
+						&.max {
+							@include transform(rotate(180deg));
+						}
 					}
 				}
 			}
