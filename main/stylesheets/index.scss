@@ -73,32 +73,89 @@ html {
 	}
 	.contents {
 		.content {
-			margin-top: 8.5rem;
-			.content-img {
-				display: block;
-				width: 100%;
-				height: 27rem;
-				background-color: $gray5;
+			margin-top: 10rem;
+			width: 75%;
+			&.right {
+				margin-left: 25%;
 			}
-			.content-def {
+			.content-slider {
+				overflow: hidden;
+				.slide {
+					position: relative;
+					width: 100%;
+					max-width: 470px;
+					img {
+						width: 100%;
+						display: block;
+					}
+					.img-hover {
+						position: absolute;
+						top: 0;
+						left: 0;
+						opacity: 0;
+					}
+					&:hover {
+						.img-hover {
+							opacity: 1;
+						}
+					}
+				}
+			}
+			.content-title {
 				@include flexbox();
-				@include align-items(flex-start);
-				color: $black;
+				@include justify-content(space-between);
 				margin-top: 3rem;
-				.def-title {
-					display: inline-block;
-					width: 50%;
-					font-size: 2.25rem;
-					font-family: 'GmarketSansBold';
+				.title {
+    			    font-family: 'GmarketSansBold';
+    			    font-size: 4.75rem;
+    			    line-height: 1;
+    			    color: $black;
+					span {
+						font-family: 'GmarketSansLight';
+						font-size: 1.25rem;
+						vertical-align: top;
+						margin-left: 0.5rem;
+					}
 				}
-				.def-text {
-					display: inline-block;
-					width: 50%;
-					font-size: 1.25rem;
-					line-height: 1.5;
-					word-break: keep-all;
-					word-wrap: break-word;
+				.arrow {
+					width: 20%;
+					max-width: 176px;
+					@include flexbox();
+					@include justify-content(flex-end);
+					.arrow-btn {
+						position: relative;
+						img {
+							width: 100%;
+							display: block;
+							max-width: 80px;
+						}
+						.btn-active {
+							position: absolute;
+							top: 0;
+							left: 0;
+							opacity: 0;
+						}
+						&:hover {
+							.btn {
+								opacity: 0;
+							}
+							.btn-active {
+								opacity: 1;
+							}
+						}
+					}
+					.back {
+						margin-right: 16px;
+					}
 				}
+			}
+			.content-desc {
+				font-family: 'GmarketSansLight';
+				line-height: 1.4;
+				width: 60%;
+				word-wrap: break-word;
+				word-break: keep-all;
+				margin-top: 2.5rem;
 			}
 		}
 	}
@@ -133,24 +190,40 @@ html {
 		}
 		.contents {
 			.content {
-				.content-img {
-					height: 27rem;
+				width: 100%;
+				&.right {
+					margin-left: 0;
 				}
-				.content-def {
-					display: block;
-					@include align-items(unset);
-					margin-top: 3rem;
-					.def-title {
-						display: block;
-						width: 100%;
+				.content-slider {
+					.slide {
+						max-width: 280px;
 					}
-					.def-text {
-						display: block;
-						width: 100%;
-						margin-top: 1rem;
-						font-size: 1rem;
+				}		
+				.content-title {
+					@include align-items(center);
+					.title {
+    				    font-size: 1.75rem;
+						span {
+							font-size: 1.1rem;
+						}
+					}
+					.arrow {
+						width: 28%;
+						.arrow-btn {
+							position: relative;
+							img {
+								max-width: 80px;
+							}
+						}
+						.back {
+							margin-right: 10px;
+						}
 					}
 				}
+				.content-desc {
+					width: 90%;
+					margin-top: 1.5rem;
+				}	
 			}
 		}
 	}
